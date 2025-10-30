@@ -1,26 +1,18 @@
-# Checkpoint – Batch 1
+# Checkpoint – Batch 2
 
 ## Added in this batch
 
-- `package.json` with project metadata, scripts, dependencies and devDependencies.
-- `.gitignore` to exclude node modules, build artifacts, environment files and IDE folders.
-- `README.md` outlining project purpose, features, setup, project structure and contribution guidelines.
-- `next.config.ts` enabling experimental app directory and strict mode.
-- `tailwind.config.ts` with dark mode configuration, custom color palette and file scanning globs.
-- `postcss.config.js` to wire TailwindCSS and autoprefixer.
-- `tsconfig.json` for TypeScript compiler options.
-- `.eslintrc.js` extending Next.js and Prettier configs with custom rules.
-- `.prettierrc.json` specifying Prettier formatting preferences.
-- `styles/globals.css` importing Tailwind layers and setting base dark background and text colours.
-- `lib/utils.ts` providing helper functions (`cn` class name combiner and `formatDate`).
-- `CHECKPOINT.md` documenting this batch.
+- `app/layout.tsx` – Defines the root layout for the App Router, imports global styles and renders Navbar and Footer components.
+- `app/page.tsx` – Home page with hero section and call-to-action button.
+- `components/ui/Button.tsx` – Reusable Button component built on next/link with Tailwind styling.
+- `components/ui/Navbar.tsx` – Navigation bar listing top-level pages (Home, About, Services, Solutions, Research, Resources, Newsroom, Events, Portal).
+- `components/ui/Footer.tsx` – Footer component with copyright notice and links to Privacy, Terms, and Contact pages.
 
-## What’s next
+## What's next
 
-Proceed to Batch 2 as outlined in the roadmap:
+Proceed to Batch 3 as outlined in the roadmap:
 
-- Initialize Tailwind with shadcn/ui components.
-- Create the base layout at `/app/layout.tsx`.
-- Build the root page at `/app/page.tsx`.
-- Scaffold `/components/ui/*` with essential primitives (navigation, footer, card, button, etc.).
-- Update `CHECKPOINT.md` after completing Batch 2.
+- Create Prisma schema and configure the database client.
+- Add `lib/db.ts` for Prisma client instantiation.
+- Implement `prisma/seed.ts` to generate 500–1,000 seed records.
+- Include `.env.example` with necessary environment variables.
