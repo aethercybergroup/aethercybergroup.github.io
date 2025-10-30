@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aether Cyber Group</title>
+<style>
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background-color:#0a0f1d;
+  color:#dce3f4;
+}
+header {
+  background-color:#0f1a31;
+  padding:20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+header .logo {
+  display:flex;
+  align-items:center;
+}
+header .logo span {
+  font-size:24px;
+  font-weight:bold;
+  color:#dce3f4;
+  margin-left:10px;
+}
+header nav a {
+  margin:0 15px;
+  color:#dce3f4;
+  text-decoration:none;
+  font-weight:bold;
+}
+header nav a:hover {
+  color:#00aaff;
+}
+.hero {
+  background-image: linear-gradient(rgba(10,15,29,0.6), rgba(10,15,29,0.6)), url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1280&q=80');
+  background-size:cover;
+  background-position:center;
+  color:white;
+  text-align:center;
+  padding:120px 20px;
+}
+.hero h1 {
+  font-size:48px;
+  margin-bottom:20px;
+}
+.hero p {
+  font-size:20px;
+  margin-bottom:30px;
+}
+.hero .cta {
+  padding:10px 20px;
+  background-color:#00aaff;
+  color:#0a0f1d;
+  border:none;
+  border-radius:5px;
+  font-size:18px;
+  cursor:pointer;
+  text-decoration:none;
+}
+section {
+  padding:60px 20px;
+  max-width:1000px;
+  margin:0 auto;
+}
+section h2 {
+  font-size:36px;
+  margin-bottom:20px;
+  text-align:center;
+}
+.services {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+}
+.service-card {
+  background-color:#0f1a31;
+  padding:20px;
+  margin-bottom:20px;
+  border-radius:8px;
+  flex:1 1 calc(45% - 10px);
+  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+.service-card h3 {
+  margin-top:0;
+  color:#00aaff;
+}
+.news iframe {
+  width:100%;
+  border:none;
+  height:400px;
+}
+.about {
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+}
+footer {
+  background-color:#0f1a31;
+  color:#dce3f4;
+  text-align:center;
+  padding:20px;
+}
+
+/* Responsive Design */
+@media (max-width:768px) {
+  .services {
+    flex-direction:column;
+  }
+  .service-card {
+    flex:1 1 100%;
+  }
+  .hero h1 {
+    font-size:36px;
+  }
+  .hero p {
+    font-size:16px;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <!-- Shield SVG Icon -->
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="#00aaff" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2L2 6V12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12V6L12 2Z"/>
+      <circle cx="12" cy="12" r="5" fill="none" stroke="#00aaff" stroke-width="2"/>
+      <line x1="12" y1="7" x2="12" y2="17" stroke="#00aaff" stroke-width="2"/>
+      <line x1="7" y1="12" x2="17" y2="12" stroke="#00aaff" stroke-width="2"/>
+    </svg>
+    <span>Aether Cyber Group</span>
+  </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#news">News</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+<div id="home" class="hero">
+  <h1>Safeguarding the Digital World</h1>
+  <p>We provide cutting-edge cybersecurity solutions to protect your business from emerging threats.</p>
+  <a href="#schedule" class="cta">Schedule a Consultation</a>
+</div>
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service-card">
+      <h3>Threat Intelligence & Vulnerability Assessments</h3>
+      <p>Real-time intelligence, vulnerability scans, and risk analysis to stay ahead of cyber threats.</p>
+    </div>
+    <div class="service-card">
+      <h3>Penetration Testing & Red Team Operations</h3>
+      <p>Simulated attacks to uncover weaknesses and improve your security posture.</p>
+    </div>
+    <div class="service-card">
+      <h3>OSINT & Data Analysis</h3>
+      <p>Open-source intelligence gathering and advanced analytics for actionable insights.</p>
+    </div>
+    <div class="service-card">
+      <h3>Cyber Defense for Small Businesses</h3>
+      <p>Managed security services, incident response, and training tailored for SMEs.</p>
+    </div>
+    <div class="service-card">
+      <h3>AI-powered Security Automation</h3>
+      <p>Implement AI/ML-based detection and response to streamline your security operations.</p>
+    </div>
+  </div>
+</section>
+<section id="news">
+  <h2>Latest News</h2>
+  <div class="news">
+    <!-- Embed dynamic news feed using RSS Bloople (CISA) -->
+    <iframe src="https://rss.bloople.net/?url=https%3A%2F%2Fwww.cisa.gov%2Fnews.xml&showtitle=false&type=html&limit=5" title="Cybersecurity News"></iframe>
+  </div>
+</section>
+<section id="schedule">
+  <h2>Schedule a Consultation</h2>
+  <!-- Calendly embed -->
+  <div style="position:relative;min-width:320px;height:630px;">
+    <iframe src="https://calendly.com/aethercybergroup?embed_domain=aethercybergroup.github.io&embed_type=Inline" width="100%" height="100%" frameborder="0"></iframe>
+  </div>
+</section>
+<section id="about">
+  <h2>About Us</h2>
+  <div class="about">
+    <p>Aether Cyber Group is committed to safeguarding the digital realm. We combine military-grade expertise with cutting-edge technology to deliver world-class cybersecurity solutions. Our mission is to empower businesses and communities by providing actionable intelligence, robust defenses, and innovative security automation.</p>
+  </div>
+</section>
+<footer>
+  &copy; 2025 Aether Cyber Group. All rights reserved.
+</footer>
+</body>
+</html>
