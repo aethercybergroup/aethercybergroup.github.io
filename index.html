@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aether Cyber Group</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300aaff'%3E%3Cpath d='M12 1l9 4v6c0 5.55-3.84 10.74-9 12-5.16-1.26-9-6.45-9-12V5l9-4z' fill='%23004a80'/%3E%3Cpath d='M12 4.4l6 2.67v4.12c0 4-2.78 7.75-6 8.67-3.22-.92-6-4.67-6-8.67V7.07l6-2.67z' fill='%2300aaff'/%3E%3Cpath d='M12 7a5 5 0 110 10 5 5 0 010-10zm0 1.2a3.8 3.8 0 100 7.6 3.8 3.8 0 000-7.6z' fill='%230a0f1d'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300ffff'%3E%3Cpath d='M12 1l9 4v6c0 5.55-3.84 10.74-9 12-5.16-1.26-9-6.45-9-12V5l9-4z' fill='%23004666'/%3E%3Cpath d='M12 4.4l6 2.67v4.12c0 4-2.78 7.75-6 8.67-3.22-.92-6-4.67-6-8.67V7.07l6-2.67z' fill='%2300ffff'/%3E%3Cpath d='M12 7a5 5 0 110 10 5 5 0 010-10zm0 1.2a3.8 3.8 0 100 7.6 3.8 3.8 0 000-7.6z' fill='%030b19'/%3E%3C/svg%3E">
 <style>
   :root {
-    --primary: #00aaff;
-    --dark: #0a0f1d;
-    --navy: #0f1a31;
-    --light: #dce3f4;
-    --card: #121e3a;
+    --primary: #00ffff;
+    --dark: #030b19;
+    --navy: #051225;
+    --light: #d2eaf5;
+    --card: #0c1e37;
   }
   * { box-sizing: border-box; }
   body {
@@ -51,7 +51,8 @@
   nav a:hover { color: var(--primary); }
   .hero {
     height: 80vh;
-    background: linear-gradient(rgba(10,15,29,0.7), rgba(10,15,29,0.9)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    background: linear-gradient(rgba(3,11,25,0.7), rgba(3,11,25,0.9)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    /* dark cyber image used above; adjust as desired */
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -59,7 +60,7 @@
     text-align:center;
     padding: 0 20px;
   }
-  .hero h1 { font-size: 48px; margin-bottom: 20px; }
+  .hero h1 { font-size: 48px; margin-bottom: 20px; color: var(--primary); }
   .hero p { font-size: 20px; max-width: 700px; margin-bottom: 30px; }
   .cta-button {
     background-color: var(--primary);
@@ -72,7 +73,7 @@
     font-weight: bold;
     transition: background-color 0.2s;
   }
-  .cta-button:hover { background-color: #008ecc; }
+  .cta-button:hover { background-color: #00cccc; }
   section {
     padding: 80px 20px;
     max-width: 1100px;
@@ -104,19 +105,6 @@
     text-align:center;
   }
   .membership p { max-width: 700px; margin: 0 auto 20px; }
-  .video-section {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:20px;
-  }
-  iframe.video {
-    width: 100%;
-    max-width: 800px;
-    height: 450px;
-    border: none;
-    border-radius:8px;
-  }
   form.contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -161,10 +149,10 @@
 <header id="header">
   <div class="logo">
     <!-- small inline icon -->
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="#00aaff" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 1l9 4v6c0 5.55-3.84 10.74-9 12-5.16-1.26-9-6.45-9-12V5l9-4z" fill="#004a80"/>
-      <path d="M12 4.4l6 2.67v4.12c0 4-2.78 7.75-6 8.67-3.22-.92-6-4.67-6-8.67V7.07l6-2.67z" fill="#00aaff"/>
-      <path d="M12 7a5 5 0 110 10 5 5 0 010-10zm0 1.2a3.8 3.8 0 100 7.6 3.8 3.8 0 000-7.6z" fill="#0a0f1d"/>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="#00ffff" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 1l9 4v6c0 5.55-3.84 10.74-9 12-5.16-1.26-9-6.45-9-12V5l9-4z" fill="#004666"/>
+      <path d="M12 4.4l6 2.67v4.12c0 4-2.78 7.75-6 8.67-3.22-.92-6-4.67-6-8.67V7.07l6-2.67z" fill="#00ffff"/>
+      <path d="M12 7a5 5 0 110 10 5 5 0 010-10zm0 1.2a3.8 3.8 0 100 7.6 3.8 3.8 0 000-7.6z" fill="#030b19"/>
     </svg>
     <span style="margin-left:10px;">Aether Cyber Group</span>
   </div>
@@ -220,13 +208,6 @@
   <h2>Join Aether ISAC</h2>
   <p>Become part of our collaborative threat-sharing community. Members gain access to exclusive intelligence reports, early warnings on emerging threats, and direct support from our analysts.</p>
   <a href="#schedule" class="cta-button">Become a Member</a>
-</section>
-
-<section id="videos">
-  <h2>Inside Our Mission</h2>
-  <div class="video-section">
-    <iframe class="video" src="https://www.youtube.com/embed/2vj37yeQQHg" title="Cybersecurity Team Working" allowfullscreen></iframe>
-  </div>
 </section>
 
 <section id="schedule">
