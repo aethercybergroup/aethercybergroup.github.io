@@ -4,140 +4,189 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aether Cyber Group</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300aaff'%3E%3Cpath d='M12 1l9 4v6c0 5.55-3.84 10.74-9 12-5.16-1.26-9-6.45-9-12V5l9-4z' fill='%23004a80'/%3E%3Cpath d='M12 4.4l6 2.67v4.12c0 4-2.78 7.75-6 8.67-3.22-.92-6-4.67-6-8.67V7.07l6-2.67z' fill='%2300aaff'/%3E%3Cpath d='M12 7a5 5 0 110 10 5 5 0 010-10zm0 1.2a3.8 3.8 0 100 7.6 3.8 3.8 0 000-7.6z' fill='%230a0f1d'/%3E%3C/svg%3E">
 <style>
-body {
-  margin:0;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background-color:#0a0f1d;
-  color:#dce3f4;
-  line-height:1.6;
-}
-header {
-  background-color:#0f1a31;
-  padding:15px 30px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  position:sticky;
-  top:0;
-  z-index:1000;
-}
-header .logo {
-  display:flex;
-  align-items:center;
-  font-size:24px;
-  font-weight:bold;
-  color:#00aaff;
-}
-header nav a {
-  margin:0 15px;
-  color:#dce3f4;
-  text-decoration:none;
-  font-weight:600;
-}
-header nav a:hover {
-  color:#00aaff;
-}
-.hero {
-  background-image: linear-gradient(rgba(10,15,29,0.7), rgba(10,15,29,0.8)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1280&q=80');
-  background-size:cover;
-  background-position:center;
-  color:#fff;
-  padding:120px 20px;
-  text-align:center;
-}
-.hero h1 {
-  font-size:48px;
-  margin-bottom:20px;
-}
-.hero p {
-  font-size:20px;
-  max-width:700px;
-  margin:0 auto 30px;
-}
-.hero .cta-button {
-  background-color:#00aaff;
-  color:#0a0f1d;
-  padding:12px 24px;
-  border:none;
-  border-radius:4px;
-  font-size:18px;
-  cursor:pointer;
-  text-decoration:none;
-}
-.hero .cta-button:hover {
-  background-color:#008ecc;
-}
-section {
-  padding:60px 20px;
-  max-width:1100px;
-  margin:0 auto;
-}
-.services {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:space-between;
-  gap:20px;
-}
-.service-card {
-  background-color:#121e3a;
-  padding:20px;
-  border-radius:8px;
-  flex:1 1 calc(50% - 20px);
-  min-width:260px;
-}
-.service-card h3 {
-  margin-top:0;
-  color:#00aaff;
-}
-.news iframe {
-  border:none;
-  width:100%;
-  height:500px;
-}
-.schedule iframe {
-  border:none;
-  width:100%;
-  height:630px;
-}
-footer {
-  background-color:#0f1a31;
-  text-align:center;
-  padding:20px;
-  font-size:14px;
-  margin-top:40px;
-}
+  :root {
+    --primary: #00aaff;
+    --dark: #0a0f1d;
+    --navy: #0f1a31;
+    --light: #dce3f4;
+    --card: #121e3a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: var(--dark);
+    color: var(--light);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    transition: background-color 0.3s;
+    z-index: 1000;
+  }
+  header.scrolled { background-color: var(--navy); }
+  .logo {
+    display:flex;
+    align-items:center;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary);
+  }
+  nav a {
+    margin-left: 20px;
+    color: var(--light);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--primary); }
+  .hero {
+    height: 80vh;
+    background: linear-gradient(rgba(10,15,29,0.7), rgba(10,15,29,0.9)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding: 0 20px;
+  }
+  .hero h1 { font-size: 48px; margin-bottom: 20px; }
+  .hero p { font-size: 20px; max-width: 700px; margin-bottom: 30px; }
+  .cta-button {
+    background-color: var(--primary);
+    color: var(--dark);
+    padding: 14px 28px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    text-decoration:none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+  }
+  .cta-button:hover { background-color: #008ecc; }
+  section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  h2 { color: var(--primary); margin-bottom: 30px; text-align:center; }
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .service-card {
+    background-color: var(--card);
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 calc(50% - 20px);
+    min-width: 260px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+  }
+  .service-card:hover { transform: translateY(-5px); }
+  .service-card h3 { color: var(--primary); margin-top: 0; }
+  #news-list { list-style: none; padding: 0; }
+  #news-list li { margin-bottom: 10px; }
+  #news-list a { color: var(--primary); text-decoration: none; }
+  #news-list a:hover { text-decoration: underline; }
+  .membership {
+    text-align:center;
+  }
+  .membership p { max-width: 700px; margin: 0 auto 20px; }
+  .video-section {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+  }
+  iframe.video {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border: none;
+    border-radius:8px;
+  }
+  form.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display:flex;
+    flex-direction:column;
+    gap: 15px;
+  }
+  form.contact-form input, form.contact-form textarea {
+    padding: 10px;
+    border-radius:4px;
+    border: none;
+    background-color: #1e2b4a;
+    color: var(--light);
+  }
+  form.contact-form button {
+    width: fit-content;
+    align-self:center;
+    padding: 12px 24px;
+    background-color: var(--primary);
+    color: var(--dark);
+    border: none;
+    border-radius:4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  footer {
+    background-color: var(--navy);
+    text-align:center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    font-size: 14px;
+  }
+  @media (max-width: 768px) {
+    .service-card { flex: 1 1 100%; }
+    nav a { margin-left: 10px; }
+    .hero h1 { font-size: 36px; }
+    .hero p { font-size: 18px; }
+  }
 </style>
 </head>
 <body>
-<header>
+<header id="header">
   <div class="logo">
-    <!-- Inline SVG for shield globe icon -->
-    <svg width="32" height="32" viewBox="0 0 24 24" fill="#00aaff" xmlns="http://www.w3.org/2000/svg">
+    <!-- small inline icon -->
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="#00aaff" xmlns="http://www.w3.org/2000/svg">
       <path d="M12 1l9 4v6c0 5.55-3.84 10.74-9 12-5.16-1.26-9-6.45-9-12V5l9-4z" fill="#004a80"/>
       <path d="M12 4.4l6 2.67v4.12c0 4-2.78 7.75-6 8.67-3.22-.92-6-4.67-6-8.67V7.07l6-2.67z" fill="#00aaff"/>
       <path d="M12 7a5 5 0 110 10 5 5 0 010-10zm0 1.2a3.8 3.8 0 100 7.6 3.8 3.8 0 000-7.6z" fill="#0a0f1d"/>
- </svg>
+    </svg>
     <span style="margin-left:10px;">Aether Cyber Group</span>
   </div>
   <nav>
     <a href="#home">Home</a>
     <a href="#services">Services</a>
     <a href="#news">News</a>
+    <a href="#membership">Join Us</a>
     <a href="#schedule">Schedule</a>
     <a href="#about">About</a>
   </nav>
 </header>
 
-<div class="hero" id="home">
+<section class="hero" id="home">
   <h1>Safeguarding the Digital World</h1>
   <p>Your trusted partner for threat intelligence, penetration testing, and cyber defense. Join us to stay ahead of evolving threats.</p>
   <a href="#schedule" class="cta-button">Book a Consultation</a>
-</div>
+</section>
 
 <section id="services">
   <h2>Our Services</h2>
-  <div class="services">
+  <div class="services-container">
     <div class="service-card">
       <h3>Threat Intelligence &amp; Vulnerability Assessments</h3>
       <p>Real-time intelligence, vulnerability scans, and risk analysis to uncover and address weaknesses in your environment.</p>
@@ -163,16 +212,40 @@ footer {
 
 <section id="news">
   <h2>Latest News &amp; Alerts</h2>
-  <p>Stay informed with the latest cybersecurity updates and advisories from official sources.</p>
-  <iframe src="https://rss.bloople.net/?url=https%3A%2F%2Fwww.cisa.gov%2Fnews.xml&amp;limit=5&amp;showtitle=false&amp;type=html" loading="lazy"></iframe>
+  <p style="text-align:center;">Stay informed with the latest cybersecurity updates from trusted sources.</p>
+  <ul id="news-list"></ul>
+</section>
+
+<section id="membership" class="membership">
+  <h2>Join Aether ISAC</h2>
+  <p>Become part of our collaborative threat-sharing community. Members gain access to exclusive intelligence reports, early warnings on emerging threats, and direct support from our analysts.</p>
+  <a href="#schedule" class="cta-button">Become a Member</a>
+</section>
+
+<section id="videos">
+  <h2>Inside Our Mission</h2>
+  <div class="video-section">
+    <iframe class="video" src="https://www.youtube.com/embed/2vj37yeQQHg" title="Cybersecurity Team Working" allowfullscreen></iframe>
+  </div>
 </section>
 
 <section id="schedule">
   <h2>Schedule a Consultation</h2>
-  <p>Book a meeting with our experts to discuss your cybersecurity needs.</p>
+  <p style="text-align:center;">Book a meeting with our experts to discuss your cybersecurity needs.</p>
   <div class="schedule">
-    <iframe src="https://calendly.com/aethercybergroup?embed_domain=aethercybergroup.github.io&amp;embed_type=Inline" loading="lazy"></iframe>
+    <iframe src="https://calendly.com/aethercybergroup?embed_domain=aethercybergroup.github.io&amp;embed_type=Inline" width="100%" height="630" frameborder="0"></iframe>
   </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <form name="contact" method="POST" data-netlify="true" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="company" placeholder="Company/Organization">
+    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 </section>
 
 <section id="about">
@@ -183,5 +256,52 @@ footer {
 <footer>
   &copy; 2025 Aether Cyber Group. All rights reserved.
 </footer>
+
+<script>
+// Navbar background change on scroll
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+// Load RSS feeds dynamically
+async function fetchFeed(url) {
+  const resp = await fetch('https://rss.bloople.net/?url=' + encodeURIComponent(url) + '&limit=5&type=json');
+  return resp.json();
+}
+async function loadNews() {
+  const feeds = [
+    'https://www.cisa.gov/news.xml',
+    'https://www.cisa.gov/sites/default/files/rss/alerts.xml'
+  ];
+  let items = [];
+  for (const feed of feeds) {
+    try {
+      const data = await fetchFeed(feed);
+      if (data.items) items = items.concat(data.items);
+    } catch (e) {
+      console.error(e);
+    }
+  }
+  // Sort by publication date descending
+  items.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+  const list = document.getElementById('news-list');
+  items.slice(0, 5).forEach(item => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = item.link;
+    a.target = '_blank';
+    const date = new Date(item.pubDate).toLocaleDateString();
+    a.textContent = `${item.title} (${date})`;
+    li.appendChild(a);
+    list.appendChild(li);
+  });
+}
+document.addEventListener('DOMContentLoaded', loadNews);
+</script>
 </body>
 </html>
