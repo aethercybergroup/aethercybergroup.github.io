@@ -1,0 +1,21 @@
+# Node
+node_modules/
+.env
+.env.local
+.next/
+.out/
+dist/
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# Mac
+.DS_Store
+# Editor directories
+.idea/
+.vscode/
+# Prisma
+/prisma/dev.db
+# Playwright
+/test-results/
