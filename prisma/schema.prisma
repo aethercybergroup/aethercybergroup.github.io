@@ -1,0 +1,100 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  password  String?
+  sessions  Session[]
+  apiKeys   ApiKey[]
+  createdAt DateTime @default(now())
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  expiresAt DateTime
+}
+
+model ApiKey {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+}
+
+model Article {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  excerpt     String?
+  content     String
+  publishedAt DateTime?
+  createdAt   DateTime @default(now())
+}
+
+model PressRelease {
+  id        String   @id @default(cuid())
+  title     String
+  slug      String   @unique
+  body      String
+  releasedAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model Advisory {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  severity    String
+  summary     String
+  details     String
+  publishedAt DateTime?
+  createdAt   DateTime @default(now())
+}
+
+model VulnBrief {
+  id          String   @id @default(cuid())
+  cve         String   @unique
+  summary     String
+  details     String
+  publishedAt DateTime?
+}
+
+model Event {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  startDate   DateTime
+  endDate     DateTime
+  location    String?
+  registrations Registration[]
+  createdAt   DateTime @default(now())
+}
+
+model Registration {
+  id        String   @id @default(cuid())
+  eventId   String
+  event     Event    @relation(fields: [eventId], references: [id])
+  name      String
+  email     String
+  createdAt DateTime @default(now())
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  createdAt DateTime @default(now())
+}
