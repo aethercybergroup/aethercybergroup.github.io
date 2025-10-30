@@ -7,13 +7,14 @@
 <style>
 body {
   margin:0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   background-color:#0a0f1d;
   color:#dce3f4;
+  line-height:1.6;
 }
 header {
   background-color:#0f1a31;
-  padding:20px;
+  padding:15px 30px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -24,29 +25,26 @@ header {
 header .logo {
   display:flex;
   align-items:center;
-}
-header .logo span {
   font-size:24px;
   font-weight:bold;
-  color:#dce3f4;
-  margin-left:10px;
+  color:#00aaff;
 }
 header nav a {
   margin:0 15px;
   color:#dce3f4;
   text-decoration:none;
-  font-weight:bold;
+  font-weight:600;
 }
 header nav a:hover {
   color:#00aaff;
 }
 .hero {
-  background-image: linear-gradient(rgba(10,15,29,0.6), rgba(10,15,29,0.6)), url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1280&q=80');
+  background-image: linear-gradient(rgba(10,15,29,0.7), rgba(10,15,29,0.8)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1280&q=80');
   background-size:cover;
   background-position:center;
-  color:white;
-  text-align:center;
+  color:#fff;
   padding:120px 20px;
+  text-align:center;
 }
 .hero h1 {
   font-size:48px;
@@ -54,90 +52,73 @@ header nav a:hover {
 }
 .hero p {
   font-size:20px;
-  margin-bottom:30px;
+  max-width:700px;
+  margin:0 auto 30px;
 }
-.hero .cta {
-  padding:10px 20px;
+.hero .cta-button {
   background-color:#00aaff;
   color:#0a0f1d;
+  padding:12px 24px;
   border:none;
-  border-radius:5px;
+  border-radius:4px;
   font-size:18px;
   cursor:pointer;
   text-decoration:none;
 }
+.hero .cta-button:hover {
+  background-color:#008ecc;
+}
 section {
   padding:60px 20px;
-  max-width:1000px;
+  max-width:1100px;
   margin:0 auto;
-}
-section h2 {
-  font-size:36px;
-  margin-bottom:20px;
-  text-align:center;
 }
 .services {
   display:flex;
   flex-wrap:wrap;
   justify-content:space-between;
+  gap:20px;
 }
 .service-card {
-  background-color:#0f1a31;
+  background-color:#121e3a;
   padding:20px;
-  margin-bottom:20px;
   border-radius:8px;
-  flex:1 1 calc(45% - 10px);
-  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+  flex:1 1 calc(50% - 20px);
+  min-width:260px;
 }
 .service-card h3 {
   margin-top:0;
   color:#00aaff;
 }
 .news iframe {
-  width:100%;
   border:none;
-  height:400px;
+  width:100%;
+  height:500px;
 }
-.about {
-  text-align:center;
-  font-size:18px;
-  line-height:1.6;
+.schedule iframe {
+  border:none;
+  width:100%;
+  height:630px;
 }
 footer {
   background-color:#0f1a31;
-  color:#dce3f4;
   text-align:center;
   padding:20px;
-}
-
-/* Responsive Design */
-@media (max-width:768px) {
-  .services {
-    flex-direction:column;
-  }
-  .service-card {
-    flex:1 1 100%;
-  }
-  .hero h1 {
-    font-size:36px;
-  }
-  .hero p {
-    font-size:16px;
-  }
+  font-size:14px;
+  margin-top:40px;
 }
 </style>
 </head>
 <body>
 <header>
   <div class="logo">
-    <!-- Shield SVG Icon -->
+    <!-- Inline SVG for shield globe icon -->
     <svg width="32" height="32" viewBox="0 0 24 24" fill="#00aaff" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2L2 6V12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12V6L12 2Z"/>
-      <circle cx="12" cy="12" r="5" fill="none" stroke="#00aaff" stroke-width="2"/>
-      <line x1="12" y1="7" x2="12" y2="17" stroke="#00aaff" stroke-width="2"/>
-      <line x1="7" y1="12" x2="17" y2="12" stroke="#00aaff" stroke-width="2"/>
-    </svg>
-    <span>Aether Cyber Group</span>
+      <path d="M12 1l9 4v6c0 5.55-3.84 10.74-9 12-5.16-1.26-9-6.45-9-12V5l9-4z" fill="#004a80"/>
+      <path d="M12 4.4l6 2.67v4.12c0 4-2.78 7.75-6 8.67-3.22-.92-6-4.67-6-8.67V7.07l6-2.67z" fill="#00aaff"/>
+      <path d="M12 7a5 5 0 110 10 5 5 0 010-10zm0 1.2a3.8 3.8 0 100 7.6 3.8 3.8 0 000-7.6z" fill="#0a0f1d"/>
+ </svg>
+    <span style="margin-left:10px;">Aether Cyber Group</span>
   </div>
   <nav>
     <a href="#home">Home</a>
@@ -147,24 +128,26 @@ footer {
     <a href="#about">About</a>
   </nav>
 </header>
-<div id="home" class="hero">
+
+<div class="hero" id="home">
   <h1>Safeguarding the Digital World</h1>
-  <p>We provide cutting-edge cybersecurity solutions to protect your business from emerging threats.</p>
-  <a href="#schedule" class="cta">Schedule a Consultation</a>
+  <p>Your trusted partner for threat intelligence, penetration testing, and cyber defense. Join us to stay ahead of evolving threats.</p>
+  <a href="#schedule" class="cta-button">Book a Consultation</a>
 </div>
+
 <section id="services">
   <h2>Our Services</h2>
   <div class="services">
     <div class="service-card">
-      <h3>Threat Intelligence & Vulnerability Assessments</h3>
-      <p>Real-time intelligence, vulnerability scans, and risk analysis to stay ahead of cyber threats.</p>
+      <h3>Threat Intelligence &amp; Vulnerability Assessments</h3>
+      <p>Real-time intelligence, vulnerability scans, and risk analysis to uncover and address weaknesses in your environment.</p>
     </div>
     <div class="service-card">
-      <h3>Penetration Testing & Red Team Operations</h3>
-      <p>Simulated attacks to uncover weaknesses and improve your security posture.</p>
+      <h3>Penetration Testing &amp; Red Team Operations</h3>
+      <p>Simulated attacks to uncover security gaps and strengthen your defenses before adversaries strike.</p>
     </div>
     <div class="service-card">
-      <h3>OSINT & Data Analysis</h3>
+      <h3>OSINT &amp; Data Analysis</h3>
       <p>Open-source intelligence gathering and advanced analytics for actionable insights.</p>
     </div>
     <div class="service-card">
@@ -177,26 +160,26 @@ footer {
     </div>
   </div>
 </section>
+
 <section id="news">
-  <h2>Latest News</h2>
-  <div class="news">
-    <!-- Embed dynamic news feed using RSS Bloople (CISA) -->
-    <iframe src="https://rss.bloople.net/?url=https%3A%2F%2Fwww.cisa.gov%2Fnews.xml&showtitle=false&type=html&limit=5" title="Cybersecurity News"></iframe>
-  </div>
+  <h2>Latest News &amp; Alerts</h2>
+  <p>Stay informed with the latest cybersecurity updates and advisories from official sources.</p>
+  <iframe src="https://rss.bloople.net/?url=https%3A%2F%2Fwww.cisa.gov%2Fnews.xml&amp;limit=5&amp;showtitle=false&amp;type=html" loading="lazy"></iframe>
 </section>
+
 <section id="schedule">
   <h2>Schedule a Consultation</h2>
-  <!-- Calendly embed -->
-  <div style="position:relative;min-width:320px;height:630px;">
-    <iframe src="https://calendly.com/aethercybergroup?embed_domain=aethercybergroup.github.io&embed_type=Inline" width="100%" height="100%" frameborder="0"></iframe>
+  <p>Book a meeting with our experts to discuss your cybersecurity needs.</p>
+  <div class="schedule">
+    <iframe src="https://calendly.com/aethercybergroup?embed_domain=aethercybergroup.github.io&amp;embed_type=Inline" loading="lazy"></iframe>
   </div>
 </section>
+
 <section id="about">
   <h2>About Us</h2>
-  <div class="about">
-    <p>Aether Cyber Group is committed to safeguarding the digital realm. We combine military-grade expertise with cutting-edge technology to deliver world-class cybersecurity solutions. Our mission is to empower businesses and communities by providing actionable intelligence, robust defenses, and innovative security automation.</p>
-  </div>
+  <p>Aether Cyber Group is committed to safeguarding the digital realm. We combine military-grade expertise with cutting-edge technology to deliver world-class cybersecurity solutions. Our mission is to empower businesses and communities by providing actionable intelligence, robust defenses, and innovative security automation.</p>
 </section>
+
 <footer>
   &copy; 2025 Aether Cyber Group. All rights reserved.
 </footer>
