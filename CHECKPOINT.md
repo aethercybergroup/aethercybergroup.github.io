@@ -1,18 +1,17 @@
-# Checkpoint – Batch 2
+# Checkpoint – Batch 3
 
 ## Added in this batch
 
-- `app/layout.tsx` – Defines the root layout for the App Router, imports global styles and renders Navbar and Footer components.
-- `app/page.tsx` – Home page with hero section and call-to-action button.
-- `components/ui/Button.tsx` – Reusable Button component built on next/link with Tailwind styling.
-- `components/ui/Navbar.tsx` – Navigation bar listing top-level pages (Home, About, Services, Solutions, Research, Resources, Newsroom, Events, Portal).
-- `components/ui/Footer.tsx` – Footer component with copyright notice and links to Privacy, Terms, and Contact pages.
+- `prisma/schema.prisma` – Defines database models for User, Session, ApiKey, Article, PressRelease, Advisory, VulnBrief, Event, Registration, and ContactMessage, and their relations.
+- `lib/db.ts` – Prisma client instantiation with singleton pattern.
+- `prisma/seed.ts` – Seed script populating hundreds of records across models for development.
+- `.env.example` – Example environment variables including database URLs and NextAuth secrets.
 
 ## What's next
 
-Proceed to Batch 3 as outlined in the roadmap:
+Proceed to Batch 4 as outlined in the roadmap:
 
-- Create Prisma schema and configure the database client.
-- Add `lib/db.ts` for Prisma client instantiation.
-- Implement `prisma/seed.ts` to generate 500–1,000 seed records.
-- Include `.env.example` with necessary environment variables.
+- Implement authentication with NextAuth by creating `/app/api/auth/[...nextauth]/route.ts` with provider stubs.
+- Set up protected portal layout under `/app/(portal)/layout.tsx` and scaffold `/app/(portal)/portal/dashboard/page.tsx`.
+- Configure session and authentication using the Prisma adapter.
+- Update `CHECKPOINT.md` after completing Batch 4.
