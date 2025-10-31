@@ -1,4 +1,4 @@
-iexport default function LeadershipPage() {
+export default function LeadershipPage() {
   const leaders = [
     { name: 'Elijah Nelson', role: 'Chief Executive Officer', bio: 'Elijah is currently gaining experience as a Cyber Operations Specialist in the U.S. Army. As the founder and CEO of the company, he strives for success for the future of Aether Cyber Group' },
     { name: 'HIRING', role: 'Chief Technology Officer', bio: 'Samuel oversees technical strategy and innovation across the organization.' },
