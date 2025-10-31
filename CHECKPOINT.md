@@ -1,17 +1,11 @@
-# Checkpoint – Batch 9
+# Checkpoint – Batch 10  
 
-## Added in this batch
+## Added in this batch  
+- `app/resources/page.tsx` – Resources index page linking to knowledge base, tools, API reference, and policy templates subpages.  
+- `app/resources/knowledge-base/page.tsx` – Knowledge base page listing topics such as incident response, security policies, and vulnerability management.  
 
-- `app/research/page.tsx` – Research index page linking to advisories, vulnerability briefs, whitepapers, and labs subpages.
-- `app/research/advisories/page.tsx` – Advisories page displaying a table of security advisories with IDs, titles, and severity levels.
-- `app/research/vulnerability-briefs/page.tsx` – Vulnerability briefs page summarizing recent vulnerability briefs with severity and summary information.
-- `app/research/whitepapers/page.tsx` – Whitepapers page listing available whitepapers with short descriptions and download links.
-- `app/research/labs/page.tsx` – Labs page showcasing interactive demos like network visualizer, threat simulation, and attack surface analyzer.
-
-## What's next
-
-Proceed to Batch 10 as outlined in the roadmap:
-
-- Build the Resources section with at least four subpages (knowledge base, tools, API reference, policy templates).
-- Ensure each subpage includes original content and components appropriate for the resources domain.
+## What's next  
+Proceed to complete Batch 10:  
+- Build the remaining Resources subpages: tools (download links & checksums), API reference (rendering OpenAPI spec), and policy templates (downloadable docs).  
+- Ensure each subpage includes original content and appropriate components for the resources domain.  
 - After completing the Resources section, update `CHECKPOINT.md` accordingly.
