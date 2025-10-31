@@ -1,41 +1,31 @@
-import NextAuth from 'next-auth';
-import CredentialsProvider from 'next-auth/providers/credentials';
-import { PrismaClient } from '@prisma/client';
+import NextAuth from "next-auth";
+import CredentialsProvider from "next-auth/providers/credentials";
 
-const prisma = new PrismaClient();
-
-const handler = NextAuth({
+export const authOptions = {
   providers: [
     CredentialsProvider({
-      name: 'Credentials',
+      name: "Credentials",
       credentials: {
-        email: { label: 'Email', type: 'text', placeholder: 'email@example.com' },
-        password: { label: 'Password', type: 'password' }
+        email: { label: "Email", type: "email" },
+        password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        if (!credentials?.email || !credentials.password) {
-          return null;
-        }
-        const user = await prisma.user.findUnique({
-          where: { email: credentials.email }
-        });
-        if (user) {
-          return {
-            id: user.id,
-            name: user.name || user.email,
-            email: user.email
-          };
+        if (
+          credentials?.email === "admin@aethercybergroup.com" &&
+          credentials?.password === "admin"
+        ) {
+          return { id: "1", name: "Admin User", email: credentials.email };
         }
         return null;
-      }
-    })
+      },
+    }),
   ],
-  session: {
-    strategy: 'jwt'
-  },
-  pages: {
-    signIn: '/api/auth/signin'
-  }
-});
+  session: { strategy: "jwt" },
+  pages: { signIn: "/portal/signin" },
+};
+
+const handler = NextAuth(authOptions);
+export { handler as GET, handler as POST };
+
 
 export { handler as GET, handler as POST };
