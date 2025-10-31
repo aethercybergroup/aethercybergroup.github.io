@@ -1,16 +1,18 @@
-# Checkpoint – Batch 4
+# Checkpoint – Batch 5
 
 ## Added in this batch
 
-- `app/api/auth/[...nextauth]/route.ts` – Implements NextAuth configuration with an email/password credentials provider (and stubs for additional OAuth providers) using the Prisma adapter.
-- `app/(portal)/layout.tsx` – Protected portal layout that checks the user session via `getServerSession` and redirects unauthenticated visitors to the sign‑in page.
-- `app/(portal)/portal/dashboard/page.tsx` – Member dashboard page that greets the logged‑in user and serves as the entry point for portal features.
+- `app/home/page.tsx` – Home index page with navigation links to subpages.
+- `app/home/case-studies/page.tsx` – Displays a bar chart summarizing case study metrics.
+- `app/home/partners/page.tsx` – Lists key strategic partners.
+- `app/home/trust-and-security/page.tsx` – Outlines trust and security commitments.
+- `app/home/roadmap/page.tsx` – Shows the roadmap with a line chart using Recharts.
 
 ## What's next
 
-Proceed to Batch 5 as outlined in the roadmap:
+Proceed to Batch 6 as outlined in the roadmap:
 
-- Build the Home section with at least four subpages (e.g., case studies, partners, trust‑and‑security, roadmap).
-- Create appropriate components and charts using Recharts to visualize data on the Home subpages.
-- Ensure pages fetch or mock data via API routes when necessary.
-- Update `CHECKPOINT.md` after completing Batch 5.
+- Build the About section with at least four subpages (e.g., leadership, ethics-and-compliance, certifications, contact).
+- Implement a validated contact form that submits to `/api/contact` using Zod for validation and stores messages in the database.
+- Create downloadable certificate badges or PDF placeholders in the certifications subpage.
+- Update `CHECKPOINT.md` after completing Batch 6.
