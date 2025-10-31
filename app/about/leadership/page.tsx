@@ -1,9 +1,9 @@
-export default function LeadershipPage() {
+iexport default function LeadershipPage() {
   const leaders = [
-    { name: 'Dr. Evelyn Harper', role: 'Chief Executive Officer', bio: 'Evelyn leads Aether with over 20 years of cybersecurity experience.' },
-    { name: 'Samuel Owens', role: 'Chief Technology Officer', bio: 'Samuel oversees technical strategy and innovation across the organization.' },
-    { name: 'Lina Chen', role: 'Chief Operations Officer', bio: 'Lina manages operations and ensures service excellence.' },
-    { name: 'Carlos Mendoza', role: 'Chief Information Security Officer', bio: 'Carlos leads the security program and compliance initiatives.' },
+    { name: 'Elijah Nelson', role: 'Chief Executive Officer', bio: 'Elijah is currently gaining experience as a Cyber Operations Specialist in the U.S. Army. As the founder and CEO of the company, he strives for success for the future of Aether Cyber Group' },
+    { name: 'HIRING', role: 'Chief Technology Officer', bio: 'Samuel oversees technical strategy and innovation across the organization.' },
+    { name: 'HIRING', role: 'Chief Operations Officer', bio: 'Lina manages operations and ensures service excellence.' },
+    { name: 'HIRING', role: 'Chief Information Security Officer', bio: 'Carlos leads the security program and compliance initiatives.' },
   ];
   return (
     <section className="container mx-auto py-8">
