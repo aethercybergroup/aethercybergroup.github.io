@@ -1,17 +1,17 @@
-# Checkpoint – Batch 7
+# Checkpoint – Batch 8  
 
-## Added in this batch
+## Added in this batch  
 
-- `app/services/page.tsx` – Services index page with navigation to subpages.
-- `app/services/threat-intelligence/page.tsx` – Threat Intelligence service page showing a bar chart of threat categories.
-- `app/services/red-team/page.tsx` – Red Team service page detailing adversary emulation and assessments.
-- `app/services/blue-team/page.tsx` – Blue Team service page describing defensive operations.
-- `app/services/gov-risk-compliance/page.tsx` – Governance, Risk & Compliance service page outlining GRC offerings.
+- `app/solutions/page.tsx` – Solutions index page with navigation to subpages.  
+- `app/solutions/healthcare/page.tsx` – Healthcare solutions page describing HIPAA/GDPR compliance, EHR security, supply chain risk, and threat monitoring.  
+- `app/solutions/finance/page.tsx` – Finance solutions page covering fraud detection, PCI/SOX readiness, secure payment systems, and threat intelligence & incident response.  
+- `app/solutions/public-sector/page.tsx` – Public sector solutions page discussing critical infrastructure protection, compliance, incident response, and training.  
+- `app/solutions/technology/page.tsx` – Technology solutions page focusing on secure SDLC practices, cloud security reviews, DevSecOps integration, and threat modelling.  
 
-## What's next
+## What's next  
 
-Proceed to Batch 8 as outlined in the roadmap:
+Proceed to Batch 9 as outlined in the roadmap:  
 
-- Build the Solutions section with at least four subpages (e.g., healthcare, finance, public sector, technology).
-- Each subpage should include unique content and components relevant to the industry.
-- After completing the Solutions section, update `CHECKPOINT.md` accordingly.
+- Build the Research section with at least four subpages (advisories, vulnerability briefs, whitepapers, labs).  
+- Each subpage should include unique content and components relevant to the research domain.  
+- After completing the Research section, update `CHECKPOINT.md` accordingly.
